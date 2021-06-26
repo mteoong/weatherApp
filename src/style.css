@@ -127,6 +127,10 @@ input {
     display: block;
 }
 
+#submit {
+    display: none;
+}
+
 @media (max-width: 680px) {
     .search {
         position: absolute;

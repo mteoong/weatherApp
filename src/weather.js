@@ -14,6 +14,9 @@ function setUpDomElements() {
   const temp = document.querySelector('.temperature');
   temp.addEventListener('click', convertUnit);
 
+  const button = document.querySelector('#submit');
+  button.addEventListener('click', handleSubmit);
+
   const form = document.querySelector('form');
   form.addEventListener('submit', handleSubmit);
 }
@@ -28,7 +31,7 @@ function handleSubmit(e) {
   const error = document.querySelector('#error');
   error.classList.remove('show');
 
-  const input = document.querySelector('input[type="text"]');
+  const input = document.querySelector('#search');
   const city = input.value;
   input.value = '';
   getWeatherData(city);
