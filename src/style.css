@@ -1,0 +1,137 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.content-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('./img/clouds.jpg');
+    background-size: cover;
+}
+
+div.time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 30px 40px;
+}
+
+p.date {
+    font-size: 3rem;
+    margin: 0;
+}
+
+p.time {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 30px 40px;
+}
+
+input {
+    background: rgba(230, 230, 230, 0.411);
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.main {
+    padding: 20px;
+}
+
+.temperature {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15rem;
+    position: relative;
+    margin: 0;
+    margin-right: 35px;
+}
+
+.temperature:hover {
+    cursor: pointer;
+}
+
+.temperature::after {
+    content: attr(data-text);
+    font-size: 3rem;
+    position: absolute;
+    top: 1.8rem;
+    left: 17.3rem;
+}
+
+.location {
+    font-size: 4rem;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+
+.condition {
+    font-size: 2.2rem;
+    margin: 0;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+}
+
+.forecast {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.data {
+    border-left: 2px solid rgba(255, 255, 255, 0.295);
+    padding: 0 0 0 10px;
+    margin: 0;
+    font-size: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
+}
+
+.data > h4 {
+    margin: 10px 0;
+}
+
+#error {
+    display: none;
+    font-size: 1.4rem;
+    padding: 0px 5px;
+}
+
+#error.show {
+    display: block;
+}
+
+@media (max-width: 680px) {
+    .search {
+        position: absolute;
+        left: 0;
+        top: 80px;
+        padding: 30px 40px;
+    }
+}
